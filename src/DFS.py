@@ -1,9 +1,9 @@
 def dfs(graph):
     vertexes = {key for key in graph}
-    visited = {key: False for key in graph}
+    visited = set()
 
     for v in vertexes:
-        if not visited[v]:
+        if v not in visited:
             helper(v, visited, graph)
         else:
             pass
@@ -11,13 +11,34 @@ def dfs(graph):
 
 def helper(current_vertex, visited, graph):
     print(current_vertex)
-    visited[current_vertex] = True
+    visited.add(current_vertex)
 
     for neighbor in graph[current_vertex]:
-        if not visited[neighbor]:
+        if neighbor not in visited:
             helper(neighbor, visited, graph)
         else:
             pass
+
+
+def bfs(graph):
+    vertexes = [key for key in graph]
+    visited = set()
+    queue = []
+
+    if vertexes:
+        queue.append(vertexes[0])
+        while len(queue) > 0:
+            cur_vertex = queue.pop(0)
+            visited.add(cur_vertex)
+            print(cur_vertex)
+            for neighbor in graph[cur_vertex]:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+                    visited.add(neighbor)
+                else:
+                    pass
+    else:
+        print('graph is empty!')
 
 
 if __name__ == '__main__':
@@ -37,3 +58,4 @@ if __name__ == '__main__':
         12: [8],
     }
     dfs(graph)
+    bfs(graph)
