@@ -23,38 +23,8 @@ class Solution:
     def position(self, i, j):
         return str(i) + ',' + str(j)
 
-    def check_column(self, x, y, board):
-        if x == 0 or x == len(board) - 1:
-            return False
-        else:
-            flag = False
-            for i in range(x):
-                if board[i][y] == 'X':
-                    flag = True
-                    break
-            for i in range(x + 1, len(board)):
-                if board[i][y] == 'X':
-                    flag &= True
-                    break
-            return flag
-
-    def check_row(self, x, y, board):
-        if y == 0 or y == len(board[0]) - 1:
-            return False
-        else:
-            flag = False
-            for j in range(y):
-                if board[x][j] == 'X':
-                    flag = True
-                    break
-            for j in range(y + 1, len(board[0])):
-                if board[x][j] == 'X':
-                    flag &= True
-                    break
-            return flag
-
     def check_postion(self, x, y, board):
-        return True if self.check_row(x, y, board) and self.check_column(x, y, board) else False
+        return False if x == 0 or x == len(board) - 1 or y == 0 or y == len(board[0]) - 1 else True
 
     def check_surrounded(self, connected_component, board):
         flag = True
