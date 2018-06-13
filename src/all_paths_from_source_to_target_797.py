@@ -5,11 +5,11 @@ class Solution:
         :rtype: List[List[int]]
         """
         degree = self.get_degree(graph)
-        v = [k for k, v in enumerate(degree) if v == 0]
+        start_vertexes = [k for k, v in enumerate(degree) if v == 0]
         result = []
         tmp = []
-        for i in v:
-            self.visited(i, tmp, result, graph)
+        for v in start_vertexes:
+            self.visited(v, tmp, result, graph)
         return result
 
     def get_zero_degree(self, degree):
@@ -33,7 +33,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    graph = [[4,3,1],[3,2,4],[3],[4],[]]
+    graph = [[4, 3, 1], [3, 2, 4], [3], [4], []]
     o = Solution()
     ret = o.allPathsSourceTarget(graph)
     print(ret)
