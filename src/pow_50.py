@@ -9,7 +9,6 @@ class Solution(object):
         n = abs(n) if n < 0 else n
         result = self.fast_pow(x, n)
         return 1.0 / result if negative else result
-
         
     def fast_pow(self, base, n):
         if n == 0:
