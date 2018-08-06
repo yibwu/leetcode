@@ -33,5 +33,9 @@ class Solution(object):
 if __name__ == '__main__':
     o = Solution()
     n, k = 20, 15
+    import time
+    start = time.time()
     ret = o.combine(n, k)
+    end = time.time()
     print(ret)
+    print(end - start)
