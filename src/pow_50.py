@@ -1,5 +1,5 @@
 class Solution(object):
-    def myPow(self, x, n):
+    def my_pow(self, x, n):
         """
         :type x: float
         :type n: int
@@ -25,5 +25,5 @@ if __name__ == '__main__':
     base, n = 2.00000, 10
     base, n = 2.10000, 3
     base, n = 2.00000, -2
-    ret = o.myPow(base, n)
+    ret = o.my_pow(base, n)
     print(ret)

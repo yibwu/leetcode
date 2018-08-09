@@ -1,5 +1,5 @@
 class Solution(object):
-    def customSortString(self, S, T):
+    def custom_sort_string(self, S, T):
         """
         :type S: str
         :type T: str
@@ -25,5 +25,5 @@ if __name__ == '__main__':
     S = "kqep"
     T = "pekeq"
     o = Solution()
-    ret = o.customSortString(S, T)
+    ret = o.custom_sort_string(S, T)
     print(ret)

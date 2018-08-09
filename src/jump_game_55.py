@@ -1,5 +1,5 @@
 class Solution:
-    def canJump(self, nums):
+    def can_jump(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     o = Solution()
     nums = [2, 3, 1, 1, 4]
     # nums = [3, 2, 1, 0, 4]
-    ret = o.canJump(nums)
+    ret = o.can_jump(nums)
     print(ret)

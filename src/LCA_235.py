@@ -7,7 +7,7 @@ class TreeNode(object):
 
 
 class Solution(object):
-    def lowestCommonAncestor(self, root, p, q):
+    def lowest_common_ancestor(self, root, p, q):
         """
         :type root: TreeNode
         :type p: TreeNode
@@ -62,5 +62,5 @@ if __name__ == '__main__':
     node2.right = node1
 
     o = Solution()
-    ret = o.lowestCommonAncestor(node2, node2, node1)
+    ret = o.lowest_common_ancestor(node2, node2, node1)
     print(ret.val)

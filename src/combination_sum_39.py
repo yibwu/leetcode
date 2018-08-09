@@ -1,5 +1,5 @@
 class Solution:
-    def combinationSum(self, candidates, target):
+    def combination_sum(self, candidates, target):
         """
         :type candidates: List[int]
         :type target: int
@@ -41,5 +41,5 @@ if __name__ == '__main__':
     o = Solution()
     candidates = [2, 3, 5]
     target = 7
-    ret = o.combinationSum(candidates, target)
+    ret = o.combination_sum(candidates, target)
     print(ret)

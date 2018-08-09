@@ -7,7 +7,7 @@
 
 
 class Solution(object):
-    def pruneTree(self, root):
+    def prune_tree(self, root):
         """
         :type root: TreeNode
         :rtype: TreeNode

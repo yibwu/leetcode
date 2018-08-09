@@ -1,5 +1,5 @@
 class Solution(object):
-    def longestCommonPrefix(self, strs):
+    def longest_common_prefix(self, strs):
         """
         :type strs: List[str]
         :rtype: str
@@ -23,5 +23,5 @@ class Solution(object):
 if __name__ == '__main__':
     o = Solution()
     strs = ["flower", "flow", "flight"]
-    ret = o.longestCommonPrefix(strs)
+    ret = o.longest_common_prefix(strs)
     print(ret)

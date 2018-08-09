@@ -1,5 +1,5 @@
 class Solution:
-    def letterCombinations(self, digits):
+    def letter_combinations(self, digits):
         """
         :type digits: str
         :rtype: List[str]
@@ -39,5 +39,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     digits = '23'
-    ret = o.letterCombinations(digits)
+    ret = o.letter_combinations(digits)
     print(ret)

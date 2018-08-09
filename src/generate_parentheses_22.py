@@ -1,5 +1,5 @@
 class Solution:
-    def generateParenthesis(self, n):
+    def generate_parenthesis(self, n):
         """
         :type n: int
         :rtype: List[str]
@@ -26,5 +26,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     n = 3
-    ret = o.generateParenthesis(n)
+    ret = o.generate_parenthesis(n)
     print(ret)

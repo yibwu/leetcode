@@ -1,5 +1,5 @@
 class Solution:
-    def isValidSudoku(self, board):
+    def is_valid_sudoku(self, board):
         """
         :type board: List[List[str]]
         :rtype: bool
@@ -80,6 +80,6 @@ if __name__ == '__main__':
     #     [".", ".", ".", "4", "1", "9", ".", ".", "5"],
     #     [".", ".", ".", ".", "8", ".", ".", "7", "9"]
     # ]
-    ret = o.isValidSudoku(board)
+    ret = o.is_valid_sudoku(board)
     print(ret)
 

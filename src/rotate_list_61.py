@@ -6,7 +6,7 @@ class ListNode:
 
 
 class Solution:
-    def rotateRight(self, head, k):
+    def rotate_right(self, head, k):
         """
         :type head: ListNode
         :type k: int
@@ -76,5 +76,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, None))))) 
-    ret = o.rotateRight(head, 2)
+    ret = o.rotate_right(head, 2)
     o.print_list(ret)

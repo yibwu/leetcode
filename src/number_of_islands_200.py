@@ -1,5 +1,5 @@
 class Solution:
-    def numIslands(self, grid):
+    def num_islands(self, grid):
         """
         :type grid: List[List[str]]
         :rtype: int
@@ -47,6 +47,6 @@ if __name__ == '__main__':
         ["0", "0", "1", "0", "0"],
         ["0", "0", "0", "1", "1"]
     ]
-    ret = o.numIslands(grid)
+    ret = o.num_islands(grid)
     print(ret)
 

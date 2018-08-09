@@ -6,7 +6,7 @@ class ListNode(object):
 
 
 class Solution(object):
-    def mergeKLists(self, lists):
+    def merge_k_lists(self, lists):
         """
         :type lists: List[ListNode]
         :rtype: ListNode
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     list2 = ListNode(1, ListNode(3, ListNode(4, None)))
     list3 = ListNode(2, ListNode(6, None))
     lists = [list1, list2, list3]
-    ret = o.mergeKLists(lists)
+    ret = o.merge_k_lists(lists)
     while ret:
         print(ret.val)
         ret = ret.next

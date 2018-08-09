@@ -1,5 +1,5 @@
 class Solution:
-    def isPowerOfTwo(self, n):
+    def is_power_of_two(self, n):
         """
         :type n: int
         :rtype: bool

@@ -1,5 +1,5 @@
 class Solution:
-    def maxAreaOfIsland(self, grid):
+    def max_area_of_island(self, grid):
         """
         :type grid: List[List[int]]
         :rtype: int
@@ -51,6 +51,6 @@ if __name__ == '__main__':
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
-    ret = o.maxAreaOfIsland(grid)
+    ret = o.max_area_of_island(grid)
     print(ret)
 

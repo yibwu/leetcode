@@ -1,5 +1,5 @@
 class Solution:
-    def findTheDifference(self, s, t):
+    def find_the_difference(self, s, t):
         """
         :type s: str
         :type t: str
@@ -20,5 +20,5 @@ if __name__ == '__main__':
     o = Solution()
     s = 'abcd'
     t = 'abcde'
-    ret = o.findTheDifference(s, t)   
+    ret = o.find_the_difference(s, t)   
     print(ret)

@@ -7,7 +7,7 @@
 
 
 class Solution(object):
-    def isSymmetric(self, root):
+    def is_symmetric(self, root):
         """
         :type root: TreeNode
         :rtype: bool

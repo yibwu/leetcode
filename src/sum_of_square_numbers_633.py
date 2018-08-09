@@ -1,5 +1,5 @@
 class Solution:
-    def judgeSquareSum(self, c):
+    def judge_square_sum(self, c):
         """
         :type c: int
         :rtype: bool
@@ -21,5 +21,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     for i in range(1000000000, 1000000001):
-        a, b, ret = o.judgeSquareSum(i)
+        a, b, ret = o.judge_square_sum(i)
         print(i, a, b, ret)

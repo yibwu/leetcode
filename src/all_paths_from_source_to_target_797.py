@@ -1,5 +1,5 @@
 class Solution:
-    def allPathsSourceTarget(self, graph):
+    def all_paths_source_target(self, graph):
         """
         :type graph: List[List[int]]
         :rtype: List[List[int]]
@@ -35,5 +35,5 @@ class Solution:
 if __name__ == '__main__':
     graph = [[4, 3, 1], [3, 2, 4], [3], [4], []]
     o = Solution()
-    ret = o.allPathsSourceTarget(graph)
+    ret = o.all_paths_source_target(graph)
     print(ret)

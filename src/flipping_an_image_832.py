@@ -1,5 +1,5 @@
 class Solution:
-    def flipAndInvertImage(self, A):
+    def flip_and_invert_image(self, A):
         """
         :type A: List[List[int]]
         :rtype: List[List[int]]
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     o = Solution()
     # img = [[1, 1, 0], [1, 0, 1], [0, 0, 0]] 
     img = [[1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0]]
-    ret = o.flipAndInvertImage(img)
+    ret = o.flip_and_invert_image(img)
     print(ret)

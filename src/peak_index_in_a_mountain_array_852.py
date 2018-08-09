@@ -1,5 +1,5 @@
 class Solution:
-    def peakIndexInMountainArray(self, A):
+    def peak_index_in_mountain_array(self, A):
         """
         :type A: List[int]
         :rtype: int

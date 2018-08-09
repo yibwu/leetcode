@@ -1,5 +1,5 @@
 class Solution(object):
-    def reverseWords(self, s):
+    def reverse_words(self, s):
         """
         :type s: str
         :rtype: str
@@ -33,7 +33,7 @@ class Solution(object):
 if __name__ == '__main__':
     o = Solution()
     s = 'a  bc   def '
-    ret = o.reverseWords(s)
+    ret = o.reverse_words(s)
     print(ret)
     print(len(ret))
     

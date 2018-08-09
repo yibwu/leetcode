@@ -1,5 +1,5 @@
 class Solution:
-    def topKFrequent(self, nums, k):
+    def top_k_frequent(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
@@ -66,6 +66,6 @@ if __name__ == '__main__':
     o = Solution()
     nums = [1, 1, 1, 2, 2, 3, 3, 3]
     k = 2
-    top_k = o.topKFrequent(nums, k)
+    top_k = o.top_k_frequent(nums, k)
     print(top_k)
 

@@ -7,7 +7,7 @@ class TreeNode:
 
 
 class Solution:
-    def sumNumbers(self, root):
+    def sum_numbers(self, root):
         """
         :type root: TreeNode
         :rtype: int
@@ -46,5 +46,5 @@ class Solution:
 if __name__ == '__main__':
     root = TreeNode(3, TreeNode(5, TreeNode(6, None, None), TreeNode(2, TreeNode(7, None, None), TreeNode(4, None, None))), TreeNode(1, TreeNode(0, None, None), TreeNode(8, None, None))) 
     o = Solution()
-    ret = o.sumNumbers(root)
+    ret = o.sum_numbers(root)
     print(ret)

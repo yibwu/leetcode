@@ -1,5 +1,5 @@
 class Solution(object):
-    def scoreOfParentheses(self, S):
+    def score_of_parentheses(self, S):
         """
         :type S: str
         :rtype: int
@@ -36,5 +36,5 @@ if __name__ == '__main__':
     s = "()()"
     s = "(())"
     s = "(()(()))"
-    ret = o.scoreOfParentheses(s)
+    ret = o.score_of_parentheses(s)
     print(ret)

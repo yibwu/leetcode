@@ -1,5 +1,5 @@
 class Solution:
-    def countBattleships(self, board):
+    def count_battleships(self, board):
         """
         :type board: List[List[str]]
         :rtype: int
@@ -27,5 +27,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     board = [['.', '.'], ['X', 'X']]
-    ret = o.countBattleships(board)
+    ret = o.count_battleships(board)
     print(ret)

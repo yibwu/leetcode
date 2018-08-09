@@ -1,5 +1,5 @@
 class Solution(object):
-    def maxSubArray(self, nums):
+    def max_sub_array(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -20,5 +20,5 @@ if __name__ == '__main__':
     o = Solution()
     nums = [-2,1,-3,4,-1,2,1,-5,4]
     # nums = [-1]
-    ret = o.maxSubArray(nums)
+    ret = o.max_sub_array(nums)
     print(ret)

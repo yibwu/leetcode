@@ -1,5 +1,5 @@
 class Solution:
-    def countBits(self, num):
+    def count_bits(self, num):
         """
         :type num: int
         :rtype: List[int]

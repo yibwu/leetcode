@@ -1,5 +1,5 @@
 class Solution(object):
-    def reconstructQueue(self, people):
+    def reconstruct_queue(self, people):
         """
         :type people: List[List[int]]
         :rtype: List[List[int]]
@@ -46,5 +46,5 @@ class Solution(object):
 if __name__ == '__main__':
     o = Solution()
     people = [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
-    ret = o.reconstructQueue(people)
+    ret = o.reconstruct_queue(people)
     print(ret)

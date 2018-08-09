@@ -1,5 +1,5 @@
 class Solution:
-    def subdomainVisits(self, cpdomains):
+    def subdomain_visits(self, cpdomains):
         """
         :type cpdomains: List[str]
         :rtype: List[str]
@@ -26,6 +26,6 @@ if __name__ == '__main__':
     o = Solution()
     arr = ["9001 discuss.leetcode.com"]
     arr = ["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]
-    ret = o.subdomainVisits(arr)
+    ret = o.subdomain_visits(arr)
     print(ret)
 

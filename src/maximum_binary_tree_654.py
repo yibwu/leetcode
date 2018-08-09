@@ -13,7 +13,7 @@ class TreeNode:
 
 
 class Solution:
-    def constructMaximumBinaryTree(self, nums):
+    def construct_maximum_binarytree(self, nums):
         """
         :type nums: List[int]
         :rtype: TreeNode
@@ -35,6 +35,6 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     nums = [3, 2, 1, 6, 0, 5]
-    root = o.constructMaximumBinaryTree(nums)
+    root = o.construct_maximum_binarytree(nums)
     TreeNode.walk_preorder(root)
     

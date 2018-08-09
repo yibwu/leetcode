@@ -1,5 +1,5 @@
 class Solution(object):
-    def complexNumberMultiply(self, a, b):
+    def complex_number_multiply(self, a, b):
         """
         :type a: str
         :type b: str
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     o = Solution()
     a = "1+-1i"
     b = "1+-1i"
-    ret = o.complexNumberMultiply(a, b)
+    ret = o.complex_number_multiply(a, b)
     print(ret)

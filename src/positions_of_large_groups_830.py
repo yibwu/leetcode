@@ -1,5 +1,5 @@
 class Solution(object):
-    def largeGroupPositions(self, S):
+    def large_group_positions(self, S):
         """
         :type S: str
         :rtype: List[List[int]]
@@ -21,5 +21,5 @@ if __name__ == '__main__':
     o = Solution()
     s = "abbxxxxzzy"
     # s = "abcdddeeeeaabbbcd"
-    ret = o.largeGroupPositions(s)
+    ret = o.large_group_positions(s)
     print(ret)

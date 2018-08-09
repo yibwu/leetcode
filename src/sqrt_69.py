@@ -1,5 +1,5 @@
 class Solution:
-    def mySqrt(self, x):
+    def my_sqrt(self, x):
         """
         :type x: int
         :rtype: int
@@ -21,5 +21,5 @@ class Solution:
 if __name__ == '__main__':
     o = Solution()
     for i in range(1, 101):
-        ret = o.mySqrt(i)
+        ret = o.my_sqrt(i)
         print(i, ret)
