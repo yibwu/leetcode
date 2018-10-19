@@ -6,7 +6,7 @@ class ListNode(object):
 
 
 class Solution(object):
-    def hasCycle(self, head):
+    def has_cycle(self, head):
         """
         :type head: ListNode
         :rtype: bool
@@ -28,5 +28,5 @@ class Solution(object):
 if __name__ == '__main__':
     o = Solution()
     head = ListNode(1, ListNode(2, None))
-    ret = o.hasCycle(head)
+    ret = o.has_cycle(head)
     print(ret)
