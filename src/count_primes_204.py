@@ -4,18 +4,21 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        arr = [False for _ in range(n)]
+        is_prime = False
+        not_prime = True
+        arr = [is_prime for _ in range(n)]
         for i in range(2, n):
             k = 2
-            if not arr[i]:
+            if arr[i] == is_prime:
                 while i * k < n:
-                    arr[i * k] = True
+                    arr[i * k] = not_prime
                     k += 1
-        return arr[2:].count(False)
+        return arr[2:].count(is_prime)
 
 
 if __name__ == '__main__':
     o = Solution()
-    o.countPrimes(10)
+    ret = o.countPrimes(10)
+    print(ret)
 
 
