@@ -12,12 +12,12 @@ class Solution:
         if not root:
             return True
 
-        last_visited = None
+        last_visited = root 
         queue = [root]
 
         while queue:
             cur = queue.pop(0)
-            if last_visited is not None and last_visited.val != cur.val:
+            if last_visited.val != cur.val:
                 return False
             last_visited = cur
             if cur.left:
