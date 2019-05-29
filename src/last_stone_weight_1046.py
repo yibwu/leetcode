@@ -1,7 +1,7 @@
 class Solution:
 
     def last_stone_weight(self, stones):
-        self.build_heap(stones)
+        self.build_max_heap(stones)
         while len(stones) > 1:
             a, b = self.get_max_two_element(stones)
             if a == b:
@@ -56,7 +56,7 @@ class Solution:
             else:
                 break
 
-    def build_heap(self, nums):
+    def build_max_heap(self, nums):
         i = len(nums) // 2 - 1
         while i >= 0:
             self.adjust_heap(nums, i)
