@@ -1,4 +1,6 @@
 class RecentCounter:
+    
+    DURATION = 3000
 
     def __init__(self):
         self.i = 0          # start index
@@ -8,18 +10,18 @@ class RecentCounter:
     def ping(self, t):
         self.nums.append(t)
         if self.expect is None:
-            self.expect = t + 3000
+            self.expect = t + self.DURATION
             
         if t < self.expect:
             return len(self.nums) - self.i
         elif t == self.expect:
             self.i += 1
-            self.expect = self.nums[self.i] + 3000
+            self.expect = self.nums[self.i] + self.DURATION
             return len(self.nums) - self.i + 1
         else:
-            while self.nums[self.i] + 3000 < t:
+            while self.nums[self.i] + self.DURATION < t:
                 self.i += 1
-            self.expect = self.nums[self.i] + 3000
+            self.expect = self.nums[self.i] + self.DURATION
             return len(self.nums) - self.i
 
 
