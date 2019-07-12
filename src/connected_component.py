@@ -63,7 +63,13 @@ def init_matrix(row, col):
     return matrix
 
 
+def print_matrix(matrix):
+    for row in matrix:
+        print(row)
+
+
 if __name__ == '__main__':
     matrix = init_matrix(8, 8)
+    print_matrix(matrix)
     count = get_connected_component(matrix)
     print(count)
