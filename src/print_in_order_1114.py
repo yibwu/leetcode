@@ -1,4 +1,5 @@
 class Foo:
+
     def __init__(self):
         import threading
         self.sem1 = threading.Semaphore(0)
