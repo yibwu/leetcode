@@ -6,11 +6,11 @@ def get_next_table(pattern):
             idx += 1
             next.append(next[-1] + 1)
         else:
-			if pattern[0] == pattern[i]:
-				next.append(idx)
-			else:
-				idx = 0
-				next.append(0) 
+            if pattern[0] == pattern[i]:
+                next.append(idx)
+            else:
+                idx = 0
+                next.append(0) 
     return next
 
 
