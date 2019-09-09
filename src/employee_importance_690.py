@@ -16,17 +16,12 @@ class Solution:
         :rtype: int
         """
         id_employee = dict()
-        for item in employees:
-            id_employee[item.id] = item
+        for e in employees:
+            id_employee[e.id] = e 
           
         id_set = set()
-        importance = [id_employee[id].importance]
-        subordinates = id_employee[id].subordinates
-        id_set.add(id)
-
-        for s in subordinates:
-            if s not in id_set:
-                self.dfs(id_employee[s], importance, id_employee, id_set)
+        importance = [0]
+        self.dfs(id_employee[id], importance, id_employee, id_set)
         return importance[0]
     
     def dfs(self, employee, importance, id_employee, id_set):
