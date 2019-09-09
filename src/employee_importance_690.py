@@ -19,17 +19,17 @@ class Solution:
         for e in employees:
             id_employee[e.id] = e 
           
-        id_set = set()
+        ids = set()
         importance = [0]
-        self.dfs(id_employee[id], importance, id_employee, id_set)
+        self.dfs(id_employee[id], importance, id_employee, ids)
         return importance[0]
     
-    def dfs(self, employee, importance, id_employee, id_set):
-        if employee.id not in id_set:
-            id_set.add(employee.id)
+    def dfs(self, employee, importance, id_employee, ids):
+        if employee.id not in ids:
+            ids.add(employee.id)
             importance[0] += employee.importance
         for s in employee.subordinates:
-            self.dfs(id_employee[s], importance, id_employee, id_set)
+            self.dfs(id_employee[s], importance, id_employee, ids)
         
 
 if __name__ == '__main__':
