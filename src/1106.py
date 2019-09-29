@@ -1,6 +1,3 @@
-import copy
-
-
 class AstNode:
     
     def __init__(self, operator, sub_exp=None):
@@ -26,7 +23,7 @@ class Solution:
                 stack.pop()
             
             if len(stack) == 1 and ch == ',':
-                res.append(''.join(copy.deepcopy(tmp)))
+                res.append(''.join(tmp))
                 tmp = []
                 continue
             if len(stack) == 1 and ch == '(':
@@ -35,7 +32,7 @@ class Solution:
                 continue
             tmp.append(ch)
         if tmp:
-            res.append(''.join(copy.deepcopy(tmp)))
+            res.append(''.join(tmp))
         return res
     
     def generate_ast(self, exp):
@@ -73,6 +70,7 @@ class Solution:
 
 if __name__ == '__main__':
     cases = [
+        '!f',
         '!(f)',
         '|(f,t)',
         '&(t,f)',
