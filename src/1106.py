@@ -41,10 +41,8 @@ class Solution:
         return res
     
     def generate_ast(self, exp):
-        if exp[0] == self.OP_TRUE:
-            return AstNode(self.OP_TRUE)
-        elif exp[0] == self.OP_FALSE:
-            return AstNode(self.OP_FALSE)
+        if exp[0] == self.OP_TRUE or exp[0] == self.OP_FALSE:
+            return AstNode(exp[0])
         else:
             root = AstNode(exp[0], [])
             sub_exp = self.get_sub_expression(exp[1:]) 
