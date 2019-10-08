@@ -21,16 +21,7 @@ def merge_two_lists(l1, l2):
             l1.next = merge_two_lists(l1.next, l2)
         return l1
     else:
-        if not l2.next:
-            l2.next = l1
-        elif l1.val <= l2.next.val:
-            l1_next = l1.next
-            l2_next = l2.next
-            l2.next = l1
-            l1.next = merge_two_lists(l1_next, l2_next)
-        else:
-            l2.next = merge_two_lists(l1, l2.next)
-        return l2
+        return merge_two_lists(l2, l1)
 
 
 if __name__ == '__main__':
