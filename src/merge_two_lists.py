@@ -14,9 +14,8 @@ def merge_two_lists(l1, l2):
             l1.next = l2
         elif l2.val <= l1.next.val:
             l1_next = l1.next
-            l2_next = l2.next
             l1.next = l2
-            l2.next = merge_two_lists(l1_next, l2_next)
+            l2.next = merge_two_lists(l1_next, l2.next)
         else:
             l1.next = merge_two_lists(l1.next, l2)
         return l1
