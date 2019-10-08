@@ -35,14 +35,14 @@ def merge_two_lists(l1, l2):
 
 if __name__ == '__main__':
     nums1 = [-9, -5, -3, -2, -2, 3, 7]
-    l1 = [ListNode(i) for i in nums1]
+    l1 = [ListNode(n) for n in nums1]
     i = 0
     while i < len(l1) - 1:
         l1[i].next = l1[i + 1]
         i += 1
 
     nums2 = [-10, -8, -4, -3, -1, 3]
-    l2 = [ListNode(i) for i in nums2]
+    l2 = [ListNode(n) for n in nums2]
     i = 0
     while i < len(l2) - 1:
         l2[i].next = l2[i + 1]
