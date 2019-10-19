@@ -1,6 +1,3 @@
-import copy
-
-
 class AstNode:
     
     def __init__(self, operator, sub_exp=None):
@@ -9,6 +6,11 @@ class AstNode:
 
 
 class Solution:
+    OP_TRUE = 't'
+    OP_FALSE = 'f'
+    OP_NOT = '!'
+    OP_OR = '|'
+    OP_AND = '&'
 
     def get_sub_expression(self, expression):
         """
@@ -26,7 +28,7 @@ class Solution:
                 stack.pop()
             
             if len(stack) == 1 and ch == ',':
-                res.append(''.join(copy.deepcopy(tmp)))
+                res.append(''.join(tmp))
                 tmp = []
                 continue
             if len(stack) == 1 and ch == '(':
@@ -35,14 +37,12 @@ class Solution:
                 continue
             tmp.append(ch)
         if tmp:
-            res.append(''.join(copy.deepcopy(tmp)))
+            res.append(''.join(tmp))
         return res
     
     def generate_ast(self, exp):
-        if exp[0] == 't':
-            return AstNode('t')
-        elif exp[0] == 'f':
-            return AstNode('f')
+        if exp[0] == self.OP_TRUE or exp[0] == self.OP_FALSE:
+            return AstNode(exp[0])
         else:
             root = AstNode(exp[0], [])
             sub_exp = self.get_sub_expression(exp[1:]) 
@@ -52,15 +52,15 @@ class Solution:
     
     def parse_ast(self, root):
         if not root.sub_exp:
-            return True if root.operator == 't' else False
-        elif root.operator == '!':
+            return True if root.operator == self.OP_TRUE else False
+        elif root.operator == self.OP_NOT:
             return not self.parse_ast(root.sub_exp[0])
-        elif root.operator == '|':
+        elif root.operator == self.OP_OR:
             for se in root.sub_exp:
                 if self.parse_ast(se):
                     return True
             return False
-        elif root.operator == '&':
+        elif root.operator == self.OP_AND:
             for se in root.sub_exp:
                 if not self.parse_ast(se):
                     return False 
@@ -73,6 +73,7 @@ class Solution:
 
 if __name__ == '__main__':
     cases = [
+        '!f',
         '!(f)',
         '|(f,t)',
         '&(t,f)',
