@@ -9,10 +9,7 @@ class Solution:
     
     def isBoomerang(self, points):
         points.sort()
-        a_list = [Point(p[0], p[1]) for p in points]
-        p0 = a_list[0]
-        p1 = a_list[1]
-        p2 = a_list[2]
+        p0, p1, p2 = (Point(p[0], p[1]) for p in points)
         
         if p0.x == p1.x == p2.x or p0.y == p1.y == p2.y:
             return False
