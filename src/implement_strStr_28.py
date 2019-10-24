@@ -15,23 +15,15 @@ def get_next_table(pattern):
 
 
 def match(s, pattern):
-    if not pattern:
-        return 0 
-    if not s:
-        return -1   
-
     next = get_next_table(pattern)
     i, j = 0, 0
     while i < len(s) and j < len(pattern):
-        if s[i] == pattern[j]:
+        if s[i] == pattern[j] or j == -1:
             i += 1
             j += 1
         else:
             j = next[j]
-            if j == -1:
-                i += 1
-                j += 1
-    return i - j if j == len(pattern) and s[i - j] == pattern[0] else -1
+    return i - j if j == len(pattern) else -1
         
     
 if __name__ == '__main__':
