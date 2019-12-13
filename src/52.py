@@ -25,7 +25,7 @@ class Solution:
         else:
             for col in range(n):
                 p = Point(row, col)
-                if len(tmp) < n and self.isValid(tmp, p):
+                if self.isValid(tmp, p):
                     tmp.append(p)
                     self.helper(tmp, res, row+1, n)
                     tmp.pop()
