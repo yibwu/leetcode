@@ -20,9 +20,9 @@ class Solution:
             res.append(aList)
         return res
 
-    def placeQueens(self, matrix, points):
-        for p in points:
-            matrix[p.x][p.y] = 'Q'
+    def placeQueens(self, matrix, queens):
+        for q in queens:
+            matrix[q.x][q.y] = 'Q'
         
     def isValid(self, points, point):
         for p in points:
