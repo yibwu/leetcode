@@ -19,9 +19,7 @@ class Solution:
                     tmp = op_left * op_right
                 elif t == '/':
                     tmp = abs(op_left) // abs(op_right)
-                    positive = (
-                        op_left >= 0 and op_right > 0) or (
-                        op_left <= 0 and op_right < 0)
+                    positive = (op_left >= 0 and op_right > 0) or (op_left <= 0 and op_right < 0)
                     tmp = tmp if positive else -tmp
                 stack.append(tmp)
         return stack[0]
