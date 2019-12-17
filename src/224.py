@@ -2,48 +2,48 @@ class Solution:
 
     def calculate(self, s):
         s = s.replace(' ', '')
-        operand = []
-        operator = []
+        operands = []
+        operators = []
         nums = []
 
         for i, c in enumerate(s):
             if c.isnumeric():
                 nums.append(c)
             elif nums:
-                operand.append(self.get_int(nums))
+                operands.append(self.get_int(nums))
                 nums = []
 
             if i == len(s) - 1 and nums:
-                operand.append(self.get_int(nums))
+                operands.append(self.get_int(nums))
                 nums = []
 
             if c == '(':
-                operator.append(c)
+                operators.append(c)
             elif c == ')':
-                self.helper(operator, operand)
-                if operator and operator[-1] == '(':
-                    operator.pop()
+                self.helper(operators, operands)
+                if operators and operators[-1] == '(':
+                    operators.pop()
             elif c == '+' or c == '-':
-                self.helper(operator, operand)
-                operator.append(c)
+                self.helper(operators, operands)
+                operators.append(c)
 
         if nums:
-            operand.append(self.get_int(nums))
-        self.helper(operator, operand)
-        return operand[-1]
+            operands.append(self.get_int(nums))
+        self.helper(operators, operands)
+        return operands[-1]
 
     def get_int(self, nums):
         return int(''.join(nums))
 
-    def helper(self, operator, operand):
-        while operator and operator[-1] != '(':
-            op = operator.pop()
-            right = operand.pop()
-            left = operand.pop()
+    def helper(self, operators, operands):
+        while operators and operators[-1] != '(':
+            op = operators.pop()
+            right = operands.pop()
+            left = operands.pop()
             if op == '+':
-                operand.append(left + right)
+                operands.append(left + right)
             else:
-                operand.append(left - right)
+                operands.append(left - right)
 
 
 if __name__ == '__main__':
