@@ -44,7 +44,6 @@ class Solution:
         if not cur:
             return root
             
-        fromLeft = parent.left == cur
         if cur.left:
             x = self.findRightMost(cur, cur.left)
             x.left = cur.left
@@ -56,6 +55,7 @@ class Solution:
         else:
             x = None
 
+        fromLeft = parent.left == cur
         if fromLeft:
             parent.left = x
         else:
